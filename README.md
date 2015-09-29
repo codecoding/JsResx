@@ -1,5 +1,8 @@
 #JsResx
 
+[![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx)
+[![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u/branch/master?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx/branch/master)
+
 This library will help you to expose some of your .NET objects into your JavaScript code.
 
 ##Resources

@@ -10,7 +10,7 @@ namespace JsResx.Example.Controllers
         public ActionResult GetConstants()
         {
             var builder = new StringBuilder();
-            builder.Append(JsObjectSerializer.GetScript<Resources.RequestTypeCodes>("Data"));
+            builder.Append(JsObjectSerializer.GetScript<RequestTypeCodes>("Data"));
             return JavaScript(builder.ToString());
 
             /* RETURN VALUE   ****************************************************************************************************
@@ -23,10 +23,10 @@ namespace JsResx.Example.Controllers
 
         public ActionResult GetConstantsAggregate()
         {
-            const string MAINVAR = "Data";
-            var builder = Utils.MainVarBuilder(MAINVAR);
-            builder.Append(JsObjectSerializer.GetScript<Resources.RequestTypeCodes>(MAINVAR, "requestTypes"));
-            builder.Append(JsObjectSerializer.GetScript<Resources.BasicCodes>(MAINVAR, "basicCodes"));
+            const string mainvar = "Data";
+            var builder = Utils.MainVarBuilder(mainvar);
+            builder.Append(JsObjectSerializer.GetScript<RequestTypeCodes>(mainvar, "requestTypes"));
+            builder.Append(JsObjectSerializer.GetScript<BasicCodes>(mainvar, "basicCodes"));
             return JavaScript(builder.ToString());
 
             /* RETURN VALUE   ****************************************************************************************************

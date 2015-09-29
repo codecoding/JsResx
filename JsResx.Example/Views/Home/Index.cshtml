@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "JSRESX";
+}
+
+<div class="jumbotron">
+    <h1>JsResx</h1>
+    <p class="lead">This library will help you to expose some .NET objects to your JavaScript code.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Resources</h2>
+        <p>You can expose any .resx file you have on your server into your JavaScript.</p>
+        <p>You can also set the default language, bringing the same experience you have on your server to the client. If a translation is missing it will fall back to the default language.</p>
+        <p>
+            @Html.ActionLink("See exposed resource »", "GetResources", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web.Config AppSettings</h2>
+        <p>You can expose several AppSettings keys if you need to. It's based in a prefix convention so only the keys that you choose will be exposed.</p>
+        <p>@Html.ActionLink("See exposed AppSettings »", "GetConfiguration", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("With custom variable name »", "GetConfigurationCustom", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("Exposing keys with different prefixes »", "GetConfigurationAggregate", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Plain Objects</h2>
+        <p>You can expose constants to your JavaScript. This is very useful if you have codes in your server that you also want to use in your client.</p>
+        <p>@Html.ActionLink("Exposing constants »", "GetConstants", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("Exposing several constants with the same main variable name »", "GetConstantsAggregate", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+        <p>On the other hand, you can also serialize and expose a .NET plain object.</p>
+        <p>@Html.ActionLink("Serializing an object »", "GetObject", new { controller = "JsResx" }, new { target = "_blank", @class = "btn btn-default" })</p>
+    </div>
+</div>

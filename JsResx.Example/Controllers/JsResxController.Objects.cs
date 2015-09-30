@@ -9,13 +9,11 @@ namespace JsResx.Example.Controllers
     {
         public ActionResult GetConstants()
         {
-            var builder = new StringBuilder();
-            builder.Append(JsObjectSerializer.GetScript<Resources.RequestTypeCodes>("Data"));
-            return JavaScript(builder.ToString());
+            return JavaScript(JsObjectSerializer.GetScript<RequestTypeCodes>("Data"));
 
             /* RETURN VALUE   ****************************************************************************************************
             
-            var Data= {  'Normal': 'NOR',  'Additional': 'ADD' };
+            var Data= { "Normal": "NOR",  "Additional": "ADD" };
 
             - The variable name has been defined by us.
             *********************************************************************************************************************/
@@ -23,15 +21,15 @@ namespace JsResx.Example.Controllers
 
         public ActionResult GetConstantsAggregate()
         {
-            const string MAINVAR = "Data";
-            var builder = Utils.MainVarBuilder(MAINVAR);
-            builder.Append(JsObjectSerializer.GetScript<Resources.RequestTypeCodes>(MAINVAR, "requestTypes"));
-            builder.Append(JsObjectSerializer.GetScript<Resources.BasicCodes>(MAINVAR, "basicCodes"));
+            const string mainvar = "Data";
+            var builder = Utils.MainVarBuilder(mainvar);
+            builder.Append(JsObjectSerializer.GetScript<RequestTypeCodes>(mainvar, "requestTypes"));
+            builder.Append(JsObjectSerializer.GetScript<BasicCodes>(mainvar, "basicCodes"));
             return JavaScript(builder.ToString());
 
             /* RETURN VALUE   ****************************************************************************************************
             
-            var Data={}; Data.requestTypes= {  'Normal': 'NOR',  'Additional': 'ADD' }; Data.basicCodes= {  'Large': 'L',  'Medium': 'M',  'Small': 'S' }; 
+            var Data={}; Data.requestTypes= {  "Normal": "NOR",  "Additional": "ADD" }; Data.basicCodes= {  "Large": "L",  "Medium": "M",  "Small": "S" }; 
 
             - The variable name has been defined by us.
             *********************************************************************************************************************/

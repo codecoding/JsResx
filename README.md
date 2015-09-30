@@ -1,6 +1,4 @@
-#JsResx
-
-[![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx)
+#JsResx [![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx)
 
 This library will help you to expose some of your .NET objects into your JavaScript code.
 
@@ -22,4 +20,4 @@ On the other hand, you can also serialize and expose a .NET plain object.
 
 ---
 
-Please, check the example project out for the specifics. Check the JsResxController out in order to see how it works.
+Please, check the [example project](jsresx.scm.azurewebsites.net) out for the specifics. Check the JsResxController out in order to see how it works.

@@ -54,5 +54,11 @@ namespace JsResx.Test
             Assert.IsTrue(result.Contains(@"Data.basicCodes="));
             Assert.IsTrue(result.Contains(@"{ ""Large"":""L"", ""Medium"":""M"", ""Small"":""S"" };"));
         }
+        
+        [TestMethod]
+        public void FailingTest()
+        {
+            Assert.IsTrue(false);
+        }
     }
 }

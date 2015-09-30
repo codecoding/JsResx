@@ -56,6 +56,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\JsResx.Example\Resources\BasicCodes.cs">
+      <Link>Resources\BasicCodes.cs</Link>
+    </Compile>
+    <Compile Include="..\JsResx.Example\Resources\ClientMessages.Designer.cs">
+      <Link>Resources\ClientMessages.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\JsResx.Example\Resources\RequestTypes.cs">
+      <Link>Resources\RequestTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\JsResx.Example\Resources\User.cs">
+      <Link>Resources\User.cs</Link>
+    </Compile>
     <Compile Include="ConfigurationTests.cs" />
     <Compile Include="ObjectTests.cs" />
     <Compile Include="ResourcesTests.cs" />
@@ -69,6 +84,25 @@
       <Project>{c7c6e74e-0d90-4941-9079-ecc1bc65766e}</Project>
       <Name>JsResx</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\JsResx.Example\Resources\ClientMessages.de.resx">
+      <Link>Resources\ClientMessages.de.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\JsResx.Example\Resources\ClientMessages.es.resx">
+      <Link>Resources\ClientMessages.es.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\JsResx.Example\Resources\ClientMessages.fr.resx">
+      <Link>Resources\ClientMessages.fr.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\JsResx.Example\Resources\ClientMessages.pt.resx">
+      <Link>Resources\ClientMessages.pt.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\JsResx.Example\Resources\ClientMessages.resx">
+      <Link>Resources\ClientMessages.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClientMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

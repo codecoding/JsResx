@@ -90,11 +90,11 @@ namespace JsResx.Objects
             //starting declaration.
             if (string.IsNullOrWhiteSpace(secondaryVarName))
             {
-                script.AppendFormat("var {0}= {{ ", mainVarName);
+                script.AppendFormat("var {0}= {{", mainVarName);
             }
             else
             {
-                script.AppendFormat("{0}.{1}= {{ ", mainVarName, secondaryVarName);
+                script.AppendFormat("{0}.{1}= {{", mainVarName, secondaryVarName);
             }
             //iterating through properties
             foreach (var fLoopVariable in l)
@@ -103,16 +103,16 @@ namespace JsResx.Objects
                 //getting info
                 var name = f.Name;
                 var value = f.GetRawConstantValue();
-                var format = " '{0}': '{1}', ";
+                var format = @" ""{0}"":""{1}"",";
                 //checking if it's a number
                 if (Information.IsNumeric(value))
                 {
-                    format = " '{0}': {1}, ";
+                    format = @" ""{0}"":{1},";
                 }
                 script.AppendFormat(format, name, value);
             }
             //removing last comma
-            script.Remove(script.Length - 2, 2);
+            script.Remove(script.Length - 1, 1);
             script.Append(" }; ");
             //returning
             return script.ToString();
@@ -129,7 +129,8 @@ namespace JsResx.Objects
         private static string BuildDataFromDictionary(IEnumerable<KeyValuePair<string, string>> dic, string mainVarName, string secondaryVarName)
         {
             var script = new StringBuilder();
-            if (dic != null && dic.Any())
+            var entryLoopVariables = dic as KeyValuePair<string, string>[] ?? dic.ToArray();
+            if (dic != null && entryLoopVariables.Any())
             {
                 //starting declaration.
                 if (string.IsNullOrWhiteSpace(secondaryVarName))
@@ -141,14 +142,14 @@ namespace JsResx.Objects
                     script.AppendFormat("{0}.{1}= {{ ", mainVarName, secondaryVarName);
                 }
                 //iterating through properties
-                foreach (var entryLoopVariable in dic)
+                foreach (var entryLoopVariable in entryLoopVariables)
                 {
                     var entry = entryLoopVariable;
-                    var format = Information.IsNumeric(entry.Value) ? " '{0}': {1}, " : " '{0}': '{1}', ";
+                    var format = Information.IsNumeric(entry.Value) ? @" ""{0}"":{1}, " : @" ""{0}"":""{1}"", ";
                     script.AppendFormat(format, entry.Key, entry.Value.Replace("'", "\\'"));
                 }
                 //removing last comma
-                script.Remove(script.Length - 2, 2);
+                script.Remove(script.Length - 1, 1);
                 script.Append(" }; ");
             }
             return script.ToString();

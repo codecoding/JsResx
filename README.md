@@ -22,4 +22,4 @@ On the other hand, you can also serialize and expose a .NET plain object.
 
 Please, check the [example project](jsresx.scm.azurewebsites.net) out for the specifics. Check the JsResxController out in order to see how it works.
 
-Powered by AppVeyor
+Powered by AppVeyor!

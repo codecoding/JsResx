@@ -1,0 +1,14 @@
+version: 1.0.{build}
+os: Visual Studio 2015
+before_build:
+- cmd: nuget restore
+build:
+  publish_wap: true
+  verbosity: minimal
+deploy:
+- provider: WebDeploy
+  server: https://jsresx.scm.azurewebsites.net:443/msdeploy.axd?site=jsresx
+  website: jsresx
+  username: $jsresx
+  password:
+    secure: TLqP3yuGhi1mX7LCn0aL8sd3exeP8axRxw7x18O/eW7c4Pqh4VqkhLtNtc4UKUiqvSii5fSYyjKSbHHKHXHjPw==

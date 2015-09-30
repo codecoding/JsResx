@@ -18,6 +18,6 @@ You can expose constants to your JavaScript. This is very useful if you have cod
 
 On the other hand, you can also serialize and expose a .NET plain object.
 
----
+## Do you want to see the results?
 
 Please, check the [example project](jsresx.scm.azurewebsites.net) out for the specifics. Check the JsResxController out in order to see how it works.

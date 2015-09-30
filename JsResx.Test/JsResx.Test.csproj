@@ -59,12 +59,6 @@
     <Compile Include="..\JsResx.Example\Resources\BasicCodes.cs">
       <Link>Resources\BasicCodes.cs</Link>
     </Compile>
-    <Compile Include="..\JsResx.Example\Resources\ClientMessages.Designer.cs">
-      <Link>Resources\ClientMessages.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientMessages.resx</DependentUpon>
-    </Compile>
     <Compile Include="..\JsResx.Example\Resources\RequestTypes.cs">
       <Link>Resources\RequestTypes.cs</Link>
     </Compile>

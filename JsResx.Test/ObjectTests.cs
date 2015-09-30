@@ -58,7 +58,7 @@ namespace JsResx.Test
         [TestMethod]
         public void FailingTest()
         {
-            //Assert.IsTrue(false);
+            Assert.IsTrue(false);
         }
     }
 }

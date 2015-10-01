@@ -2,7 +2,7 @@
 
 
 
-Expose some of your .NET objects into your JavaScript code.
+Bring your Resources and .NET objects to your JavaScript code.
 
 ##Resources
 

@@ -1,5 +1,7 @@
 version: 1.0.{build}
 os: Visual Studio 2015
+configuration: Release
+platform: Any CPU
 before_build:
 - cmd: nuget restore
 build:
@@ -12,3 +14,15 @@ deploy:
   username: $jsresx
   password:
     secure: TLqP3yuGhi1mX7LCn0aL8sd3exeP8axRxw7x18O/eW7c4Pqh4VqkhLtNtc4UKUiqvSii5fSYyjKSbHHKHXHjPw==
+  remove_files: true
+  on:
+    branch: master
+notifications:
+- provider: Slack
+  incoming_webhook: https://hooks.slack.com/services/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
+  auth_token:
+    secure: Q97tuoW1Nnx6Tjhzq9jYwQ==
+  channel: '#github'
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true

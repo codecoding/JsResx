@@ -182,4 +182,4 @@ public ActionResult GetConstantsAggregate()
 
 ## Do you want to see it working?
 
-Please, check the [example project](http://jsresx.scm.azurewebsites.net) out for the specifics. Check the JsResxController out in order to see how it works. 
+Please, check the [example project](http://jsresx.azurewebsites.net) out for the specifics. Check the JsResxController out in order to see how it works. 

@@ -47,7 +47,7 @@ namespace JsResx.Resources
 
         protected void CreateHeader(StringBuilder builder)
         {
-            var format = VarIsMainVar ? @"var {0} = {{ " : @"{0} = {{ ";
+            var format = VarIsMainVar ? @"var {0} = {{" : @"{0} = {{";
             builder.AppendFormat(format, VariableName);
         }
 
@@ -61,7 +61,7 @@ namespace JsResx.Resources
             var ns = NameSpaces.TryBeginNamespace(currentIndex);
             if (!string.IsNullOrEmpty(ns))
             {
-                builder.Append(ns).Append(": { ");
+                builder.Append(ns).Append(": {");
             }
         }
 
@@ -70,14 +70,14 @@ namespace JsResx.Resources
             if (!NameSpaces.Any()) return;
             var ns = NameSpaces.TryEndNamespace(currentIndex);
             if (string.IsNullOrEmpty(ns)) return;
-            builder.Remove(builder.Length - 2, 2);
-            builder.Append(" }, ");
+            builder.Remove(builder.Length - 1, 1);
+            builder.Append("},");
         }
 
         protected void CreateFooter(StringBuilder builder)
         {
-            builder.Remove(builder.Length - 2, 2);
-            builder.Append(" };");
+            builder.Remove(builder.Length - 1,1);
+            builder.Append("};");
         }
 
 

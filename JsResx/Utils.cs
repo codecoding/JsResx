@@ -44,7 +44,7 @@ namespace JsResx
                 var keys = ConfigurationManager.AppSettings.AllKeys;
                 foreach (var key in keys)
                 {
-                    if (key.ToLower().IndexOf(searchCriteria.ToLower(), StringComparison.InvariantCultureIgnoreCase) > -1)
+                    if (key.ToLower().IndexOf(searchCriteria.ToLower(), StringComparison.InvariantCultureIgnoreCase) == 0)
                     {
                         entries.Add(new KeyValuePair<string, string>(key, GetString(key)));
                     }

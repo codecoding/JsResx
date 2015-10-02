@@ -51,7 +51,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -69,11 +71,19 @@
     <Compile Include="ObjectTests.cs" />
     <Compile Include="ResourcesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilsTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JsResx.Example\JsResx.Example.csproj">
+      <Project>{5E4470BB-3335-4039-8E3B-CC00849340CA}</Project>
+      <Name>JsResx.Example</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JsResx\JsResx.csproj">
       <Project>{c7c6e74e-0d90-4941-9079-ecc1bc65766e}</Project>
       <Name>JsResx</Name>

@@ -11,11 +11,7 @@ namespace JsResx.Resources
         public IEnumerable<KeyValuePair<string, string>> DefaultLanguageEntries { get; set; }
 
 
-        public override string VariableName
-        {
-            get { return "Translations"; }
-            set { }
-        }
+        public override string VariableName { get; set; } = "Translations";
 
         public JsTranslationsScriptManager()
         {
@@ -24,7 +20,7 @@ namespace JsResx.Resources
 
         protected override void CreateItem(StringBuilder builder, KeyValuePair<string,string> entry)
         {
-            builder.AppendFormat(@" '{0}': '{1}', ", entry.Key, SanitizeString(entry.Value));
+            builder.AppendFormat(@"""{0}"":""{1}"",", entry.Key, SanitizeString(entry.Value));
             handledEntries.Add(entry);
         }
 

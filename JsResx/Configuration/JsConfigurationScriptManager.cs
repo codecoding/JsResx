@@ -17,10 +17,10 @@ namespace JsResx.Configuration
         /// <param name="entry">The entry.</param>
         protected override void CreateItem(System.Text.StringBuilder builder, System.Collections.Generic.KeyValuePair<string, string> entry)
         {
-            var format = " '{0}': '{1}', ";
+            var format = @"""{0}"":""{1}"",";
             if ((Information.IsNumeric(entry.Value)))
             {
-                format = " '{0}': {1}, ";
+                format = @"""{0}"":{1},";
             }
             builder.AppendFormat(format, entry.Key.Replace(Prefix, ""), SanitizeString(entry.Value));
         }

@@ -135,22 +135,22 @@ namespace JsResx.Objects
                 //starting declaration.
                 if (string.IsNullOrWhiteSpace(secondaryVarName))
                 {
-                    script.AppendFormat("var {0}= {{ ", mainVarName);
+                    script.AppendFormat("var {0}= {{", mainVarName);
                 }
                 else
                 {
-                    script.AppendFormat("{0}.{1}= {{ ", mainVarName, secondaryVarName);
+                    script.AppendFormat("{0}.{1}= {{", mainVarName, secondaryVarName);
                 }
                 //iterating through properties
                 foreach (var entryLoopVariable in entryLoopVariables)
                 {
                     var entry = entryLoopVariable;
-                    var format = Information.IsNumeric(entry.Value) ? @" ""{0}"":{1}, " : @" ""{0}"":""{1}"", ";
+                    var format = Information.IsNumeric(entry.Value) ? @" ""{0}"":{1}," : @" ""{0}"":""{1}"",";
                     script.AppendFormat(format, entry.Key, entry.Value.Replace("'", "\\'"));
                 }
                 //removing last comma
                 script.Remove(script.Length - 1, 1);
-                script.Append(" }; ");
+                script.Append("}; ");
             }
             return script.ToString();
         }

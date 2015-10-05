@@ -1,4 +1,4 @@
-#JsResx [![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx) <a href="http://jsresx.scm.azurewebsites.net"><img src="http://azuredeploy.net/deploybutton.png" width="100"   /></a>
+#JsResx [![Build status](https://ci.appveyor.com/api/projects/status/6r8dt1529l8dpr7u?svg=true)](https://ci.appveyor.com/project/codecoding/jsresx) <a href="http://jsresx.scm.azurewebsites.net"><img src="http://azuredeploy.net/deploybutton.png" width="100"/></a> [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/codecoding/jsresx.svg)](http://isitmaintained.com/project/codecoding/jsresx "Average time to resolve an issue") [![Percentage of issues still open](http://isitmaintained.com/badge/open/codecoding/jsresx.svg)](http://isitmaintained.com/project/codecoding/jsresx "Percentage of issues still open")
 
 
 

@@ -13,7 +13,7 @@ deploy:
   website: jsresx
   username: $jsresx
   password:
-    secure: TLqP3yuGhi1mX7LCn0aL8sd3exeP8axRxw7x18O/eW7c4Pqh4VqkhLtNtc4UKUiqvSii5fSYyjKSbHHKHXHjPw==
+    secure: 5cjzEEJXnAtIYunsC/LNU+G53LxWYoCVm6ovCOfoG5u2B51ryD+2vFY1fFnH8RC6SpZ/xocDecDfOnWPCDhznQ==
   remove_files: true
   on:
     branch: master
